@@ -6,9 +6,122 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>JS Intro</title>
     <!-- <script src="./intro1.js"></script> -->
-    <script src="./intro2.js"></script>
+    <!-- <script src="./intro2.js"></script> -->
+    <script src="./intro3.js"></script>
 </head>
 <body>
-    
+    Prova per provare
+    <script>
+        // var result = prompt('Digita un numero', 0);
+        
+        // if(result <= 10)
+        // {
+        //     alert('Minore o uguale di 10');
+        // }
+        // else if(result <= 15)
+        // {
+        //     alert('Maggiore di 10 e minore o uguale 15');
+        // }
+        // else
+        // {
+        //     alert('Maggiore di 15');
+        // }
+        //-------------------------------------------------------------    
+        // var number = 0;
+
+        // while(number <= 5)
+        // {
+        //     console.log('Valore corrente del numero: ' + number);
+        //     number = number + 1;
+        // }
+        //-------------------------------------------------------------
+        // var counter = 0;
+        
+        // do
+        // {
+        //     console.log('ciclo')
+        //     counter = counter + 1;    
+        // }
+        // while(counter <= 5)
+        // console.log('fine ciclo!');
+
+        // var counter2 = 10;
+        // while(counter2 <= 5)
+        // {
+        //     console.log('ciclo 2');
+        //     counter2 = counter2 + 1;
+        // }
+        // console.log('fine ciclo 2!');
+        //-------------------------------------------------------------
+        // var result = 10;
+        // for(var counter = 0; counter <=5 ;counter = counter + 1)
+        // {
+        //     console.log('Counter: ' + counter)
+        //     result = result * 3;
+        //     if(counter == 2)
+        //     {
+        //         console.log('break');
+        //         break;
+        //     }
+        // }
+        // console.log('fine ciclo! Result: ' + result);
+        //-------------------------------------------------------------
+        // var counter = prompt('digita un numero');
+        
+        // if(counter <= 10)
+        // {
+        //     alert('Minore o uguale a 10');
+        // }
+        // else if(counter <=20)
+        // {
+        //     alert('Maggiore di 10 e Minore o uguale a 20');
+        // }
+        // else if(counter <=30)
+        // {
+        //     alert('Maggiore di 20 e Minore o uguale a 30');
+        // }
+        // else
+        // {
+        //     alert('Maggiore di 30');
+        // }
+        //-------------------------------------------------------------
+        // var nome = prompt('digita un nome');
+        // switch(nome)
+        // {
+        //     case 'marco':
+        //         alert('Hai digitato marco');
+        //         break;
+        //     case 'paolo':
+        //         alert('Hai digitato paolo');
+        //         break;
+        //     case 'davide':
+        //         alert('Hai digitato davide');
+        //         break;
+        //     default:
+        //         alert('Hai digitato un altro nome');
+        //         break;
+        // }
+        //-------------------------------------------------------------
+        //numero da indovinare: 81
+        var numeroSegreto = 81;
+        var tentativi = 0;
+        while(true)
+        {
+            var numeroDigitato = prompt('Indovina il numero');
+            tentativi = tentativi + 1;
+            if(numeroDigitato == numeroSegreto)
+            {
+                alert('Congratulazioni!!!');
+                break;
+            }
+            else
+            {
+                alert('Riprova');
+            }
+        }
+        console.log('ciclo finito perchè il numero è indovinato!');
+
+        
+    </script>
 </body>
 </html>
