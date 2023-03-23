@@ -180,16 +180,104 @@
 // }
 
 //altra soluzione
-let scacchiera = '';
-let size = 18;
+// let scacchiera = '';
+// let size = 18;
 
-for (let riga = 0; riga < size; riga++) {
-    if (riga % 2 !== 0) {
-        scacchiera += ' #'.repeat(size/2);
-    }else if (riga % 2 === 0) {
-        scacchiera += '# '.repeat(size/2);
-    };
-    scacchiera += '\n';
-};
+// for (let riga = 0; riga < size; riga++) {
+//     if (riga % 2 !== 0) {
+//         scacchiera += ' #'.repeat(size/2);
+//     }else if (riga % 2 === 0) {
+//         scacchiera += '# '.repeat(size/2);
+//     };
+//     scacchiera += '\n';
+// };
 
-console.log(scacchiera);
+// console.log(scacchiera);
+//-----------------------------------------------------------------------------------------------
+// for (let i = 20; i >= 0; i-=2) {
+//     console.log(i);
+// }
+
+// for (let i = 0; i < 20; i++) {
+//     if (i % 2 === 0) {
+//         console.log(i/2);
+//     } else if (i % 3 === 0) {
+//         console.log(i**3);
+//     } else{
+//         console.log(i);
+//     }
+// }
+
+// let misteryNumber = 1, notFound = true;
+// while (notFound){
+//     const multipleOf2 = misteryNumber % 2 === 0;
+//     const multipleOf3 = misteryNumber % 3 === 0;
+//     const multipleOf5 = misteryNumber % 5 === 0;
+//     if (multipleOf2 && multipleOf3 && multipleOf5){ //&& (AND) tutte le condizioni devono essere vere per eseguire if, se falso salta a else ed esegue...
+//         console.log(misteryNumber);
+//         notFound = false;
+//     } else {
+//         misteryNumber++;
+//     }
+// }
+//----------------------------------------------------------------------------------------------------
+//PIRAMIDE
+// let riga = '#';
+// for (let i = 0; i < 7; i++) {
+//     console.log(riga);
+//     riga = riga + '#';
+// }
+//------------------------------------------------------------------------------------------------------
+//SCACCHIERA SEMPLICE
+// let rigaPari = '# # # # ', rigaDispari = ' # # # #';
+// for (let i = 0; i < 8; i++) {
+//     if (i % 2 === 0) {
+//         console.log(rigaPari);
+//     } else {
+//         console.log(rigaDispari);
+//     };
+// }
+//-----------------------------------------------------------------------------------------------------
+//ESERCIZIO SCACCHIERA
+// let scacchiera = '';
+// for (let y = 0; y < 16; y++) {
+//     for (let x = 0; x < 16; x++) {
+//        if (y % 2 === 0) {
+//         if (x % 2 === 0) {
+//             scacchiera += '#';
+//         } else {
+//             scacchiera += ' ';
+//         }
+//        } else {
+//             if (x % 2 === 0) {
+//                 scacchiera += ' ';
+//             } else {
+//                 scacchiera += '#';
+//             }
+//        }
+//     }
+//     scacchiera += '\n';
+// }
+// console.log(scacchiera);
+//----------------------------------------------------------------------------------------------------
+//ALTRA SOLUZIONE SCACCHIERA
+// let chessboard = '', size = 8;
+// for (let y = 0; y < size; y++) {
+//     if (y % 2 === 0) {
+//         for (let x = 0; x < size; x++) {
+//             if (x % 2 === 0) {
+//                 chessboard += ' ';
+//             } else {
+//                 chessboard += '#';
+//             }    
+//         }
+//     }else {
+//         for (let x = 0; x < size; x++) {
+//             if (x % 2 === 0) {
+//                chessboard += '#';
+//             } else{
+//                 chessboard += ' ';
+//             }
+//         }
+//     }
+// }
