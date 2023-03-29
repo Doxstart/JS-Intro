@@ -327,6 +327,70 @@
 // }
 
 // console.log(sumAllElements(numbers)); //867
+//------------------------------------------------------------------------------------------------------------
+//TUTTI I CICLI IN JAVASCRIPT
+
+const numbers = [9, 8, 7, 1, 2, 3];
+
+let i = 0
+//WHILE
+while (i < numbers.length){
+    const element = numbers[i];
+    console.log(element);
+    i++;
+}
+
+//FOR
+for (let i = 0; i < numbers.length; i++) {
+    const element = numbers[i];
+    console.log(element);
+}
+
+//DO WHILE
+let j = 0
+do{
+    const element = numbers[j];
+    console.log(element);
+    j++
+} while (j < numbers.length);
+
+//FOR OF
+for (const element of numbers) {
+    console.log(element);
+}
+
+//FOR EACH
+numbers.forEach((element) => console.log(element));
+
+//MAP
+numbers.map((element) => element * 2);
+
+//FILTER
+numbers.filter((element) => element % 2 === 0);
+
+//REDUCE
+numbers.reduce((previousElement, currentElement) => previousElement + currentElement, 0);
+
+const strings = ['qui', 'quo', 'qua'];
+
+strings.reduce((previousElement, currentElement) => previousElement + currentElement, '');
+
+//FOR IN - per ciclare gli oggetti
+
+const andrea = {
+    name: 'Andrea',
+    surname: 'Aisoli',
+    hasADog: true,
+    yob: 1978
+}
+
+for (const key in andrea) {
+    if (Object.hasOwnProperty.call(andrea, key)) {
+        const value = andrea[key];
+        console.log(`andrea ha la propieta ${key} associata al valore ${value}`);
+    }
+}
+
 
 //------------------------------------------------------------------------------------------------------------
 //ESERCIZI
@@ -427,66 +491,200 @@
 //1)Scrivere una funzione che prende in input un array di numeri e restituisce un array di stringhe in logica
 //FizzBuzz (map)
 
-const numbers = [3, 5, 15, 8, 12, 2];
+// const numbers = [3, 5, 15, 8, 12, 2];
 
-function convertArrayInFizzBuzz(array){
+// function convertArrayInFizzBuzz(array){
+//     const tempArray = [];
+//         for (let i = 0; i < array.length; i++) {
+//             const element = array[i];
+//             let result = '';
+//             if (element % 3 === 0 && element % 5 === 0) {
+//                result = 'FizzBuzz'; 
+//             }else if (element % 3 === 0) {
+//                 result = 'Fizz';
+//             }else if (element % 5 === 0) {
+//                 result = 'Buzz';
+//             }else{
+//                 result += element;
+//             }
+//             tempArray.push(result);
+//         }
+//         return tempArray;
+// }
 
-}
+// console.log('Esercizio 1: ', convertArrayInFizzBuzz(numbers)); //['Fizz', 'Buzz', 'FizzBuzz', '8', 'Fizz', '2']
 
-console.log(convertArrayInFizzBuzz(numbers)); //['Fizz', 'Buzz', 'FizzBuzz', '8', 'Fizz', '2']
+// //2)Scrivere una funzione che prende in input un array di numeri e restituisce un array di numeri in cui 
+// //i positivi sono trasformati in negativi e viceversa (map)
 
-//2)Scrivere una funzione che prende in input un array di numeri e restituisce un array di numeri in cui 
-//i positivi sono trasformati in negatvi e viceversa (map)
+// const numbers1 = [-3, 5, 15, -8, 12, 2, 0];
 
-const numbers1 = [-3, 5, 15, -8, 12, 2, 0];
+// function invertElements(array){
+//     const tempArray = [];
+//         for (let i = 0; i < array.length; i++) {
+//             const element = array[i];
+//             let result = 0;
+//             if (element !== 0) {
+//                 result = element * -1
+//             }
+//             tempArray.push(result);
+//         }
+//         return tempArray;
+// }
 
-function invertElements(array){
+// console.log('Esercizio 2: ', invertElements(numbers1)); //[3, -5, -15, 8, -12, -2, 0]
 
-}
+// //3)Scrivere una funzione che prende in input un array di stringhe e restituisce un array di numeri con la
+// //lunghezza delle stringhe (map)
 
-console.log(invertElements(numbers1)); //[3, -5, -15, 8, -12, -2, 0]
+// const strings = ['pippo', 'pluto', 'qui'];
 
-//3)Scrivere una funzione che prende in input un array di stringhe e restituisce un array di numeri con la
-//lunghezza delle stringhe (map)
+// function lengthOfELements(array){
+//     const tempArray = [];
+//     for (let i = 0; i < array.length; i++) {
+//         const element = array[i];
+//         tempArray.push(element.length);
+//     }
+//     return tempArray;
+// }
 
-const strings = ['pippo', 'pluto', 'qui'];
-
-function lengthOfELements(array){
-
-}
-
-console.log(lengthOfELements(strings)); //[4, 5, 3]
+// console.log('Esercizio 3: ', lengthOfELements(strings)); //[5, 5, 3]
 
 
-//4)Scrivere una funzione che prende in input un array di stringhe e restituisce solo quelle che contengono 
-//la lettera z (filter)
+// //4)Scrivere una funzione che prende in input un array di stringhe e restituisce solo quelle che contengono 
+// //la lettera z (filter)
 
-const strings2 = ['pippo', 'pluto', 'qui', 'zapotec'];
+// const strings2 = ['pippo', 'pluto', 'qui', 'zapotec'];
 
-function onlyELementswithZ(array){
+// function onlyELementswithZ(array){
+//     const tempArray = [];
+//     for (let i = 0; i < array.length; i++) {
+//         const element = array[i];
+//         // if (element.includes('z')) { //primo metodo con .includes
+//         //     tempArray.push(element);
+//         // }
+//         if (element.indexOf('z') !== -1) { //secondo modo di risolvere con .indexOf
+//             tempArray.push(element);
+//         }
+//     }
+//     return tempArray;
+// }
 
-}
+// console.log('Esercizio 4: ', onlyELementswithZ(strings2)); //['zapotec']
 
-console.log(onlyELementswithZ(strings2)); //['zapotec]
+// //5)Scrivere una funzione che prende in input un array di numeri e restituisce tutti i numeri pari (filter)
 
-//5)Scrivere una funzione che prende in input un array di numeri e restituisce tutti i numeri pari (filter)
+// const numbers2 = [-3, 5, 15, -8, 12, 2, 0];
 
-const numbers2 = [-3, 5, 15, -8, 12, 2, 0];
+// function onlyEven(array){
+//     const tempArray = [];
+//     for (let i = 0; i < array.length; i++) {
+//         const element = array[i];
+//         if (element % 2 === 0) { 
+//             tempArray.push(element);
+//         }
+//     }
+//     return tempArray;
+// }
 
-function onlyEven(array){
+// console.log('Esercizio 5: ', onlyEven(numbers2)); //[-8, 12, 2, 0]
 
-}
+// //6)Scrivere una funzione che prende in input un array di sringhe restituisce una stringa composta dalle iniziali (reduce)
 
-console.log(onlyEven(numbers2)); //[8, -12, -2, 0]
+// const strings3 = ['pippo', 'osvaldo', 'paperino'];
 
-//6)Scrivere una funzione che prende in input un array di sringhe restituisce una stringa composta dalle iniziali (reduce)
+// function sumFirstChar(array){
+//     let tempString = '';
+//         for (let i = 0; i < array.length; i++) {
+//             const element = array[i];
+//             const firstChar = element[0];
+//             tempString += firstChar;
+//         }
+//         return tempString;
+// }
 
-const strings3 = ['pippo', 'osvaldo', 'paperino'];
+// console.log('Esercizio 6: ', sumFirstChar(strings3)); //'pop'
 
-function sumFirstChar(array){
+// //7)Scrivere una funzione che prende in input un array di numeri e restituisce il maggiore
 
-}
+// const numbers3 = [-3, 5, 15, -8, 12, 2, 0];
 
-console.log(sumFirstChar(strings3)); //'pop
+// const numbers4 = [-1, -4, -3]
 
-//7)Scrivere una funzione che prende in input un array di numeri e restituisce il maggiore
+// function maxElement(array){
+//     let tempNumber = array[0];
+//         for (let i = 1; i < array.length; i++) {
+//             const element = array[i];
+//             if (tempNumber < element) {
+//                 tempNumber = element;
+//             } 
+//         }
+//         return tempNumber;
+// }
+
+// console.log('Esercizio 7: ', maxElement(numbers3)) //15
+// console.log('Esercizio 7: ', maxElement(numbers4)) //-1
+
+
+//-----------------------------------------------------------------------------------------------------------
+//INTERROGAZIONE
+
+// console.log([3, 5, 12, 1].map((numero) => numero * 2));
+
+// function loopNumbersFrom1To15AndApplyAFunction(myStrangeFunction, mySecondStrangeFunction){
+//     for (let i = 1; i < 16; i++) {
+//         const resultOfTheStrangeFunction = myStrangeFunction(i);
+//         mySecondStrangeFunction(resultOfTheStrangeFunction);
+//     }
+// }
+
+// function divideBy2IfEven(myNumber){
+//     if (myNumber % 2 === 0) {
+//         return myNumber / 2;
+//     }
+//     return myNumber;
+// }
+
+// function logIfGreaterThan4(myNumber){
+//     if (myNumber > 4) {
+//         console.log(myNumber);
+//     }
+// }
+
+// loopNumbersFrom1To15AndApplyAFunction(divideBy2IfEven, logIfGreaterThan4);
+
+// loopNumbersFrom1To15AndApplyAFunction(logIfGreaterThan4, divideBy2IfEven);
+
+// function createMultiplicator(myNumber){
+//     function multiply(selectedNumber){
+//         return selectedNumber * myNumber;
+//     }
+//     return multiply
+// FUNZIONE LAMBDA -----> return(selectedNumber) => selectedNumber * myNumber;
+// }
+
+//const createMultiplicator = (myNumber) => (selectedNumber) => selectedNumber * myNumber;
+
+// const multiplicatorBy2 = createMultiplicator(2); 
+// const multiplicatorBy3 = createMultiplicator(3);
+
+// console.log(multiplicatorBy2(5))//10
+// console.log(multiplicatorBy3(4))//12
+
+// console.log(createMultiplicator(5)(4))//20
+
+// function applyTwice(myFunction){
+//     return (input) => myFunction(myFunction(input));
+// }
+
+// function add1(selectedNumber){
+//     return selectedNumber + 1;
+// }
+
+// const add2 = applyTwice(add1);
+// const add4 = applyTwice(add2);
+
+// console.log(add2(5)) //7
+// console.log(add4(10)) //14
+
+// console.log(applyTwice(applyTwice(add1))(10)) //14
