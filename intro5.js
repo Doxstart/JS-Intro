@@ -330,66 +330,66 @@
 //------------------------------------------------------------------------------------------------------------
 //TUTTI I CICLI IN JAVASCRIPT
 
-const numbers = [9, 8, 7, 1, 2, 3];
+// const numbers = [9, 8, 7, 1, 2, 3];
 
-let i = 0
-//WHILE
-while (i < numbers.length){
-    const element = numbers[i];
-    console.log(element);
-    i++;
-}
+// let i = 0
+// //WHILE
+// while (i < numbers.length){
+//     const element = numbers[i];
+//     console.log(element);
+//     i++;
+// }
 
-//FOR
-for (let i = 0; i < numbers.length; i++) {
-    const element = numbers[i];
-    console.log(element);
-}
+// //FOR
+// for (let i = 0; i < numbers.length; i++) {
+//     const element = numbers[i];
+//     console.log(element);
+// }
 
-//DO WHILE
-let j = 0
-do{
-    const element = numbers[j];
-    console.log(element);
-    j++
-} while (j < numbers.length);
+// //DO WHILE
+// let j = 0
+// do{
+//     const element = numbers[j];
+//     console.log(element);
+//     j++
+// } while (j < numbers.length);
 
-//FOR OF
-for (const element of numbers) {
-    console.log(element);
-}
+// //FOR OF
+// for (const element of numbers) {
+//     console.log(element);
+// }
 
-//FOR EACH
-numbers.forEach((element) => console.log(element));
+// //FOR EACH
+// numbers.forEach((element) => console.log(element));
 
-//MAP
-numbers.map((element) => element * 2);
+// //MAP
+// numbers.map((element) => element * 2);
 
-//FILTER
-numbers.filter((element) => element % 2 === 0);
+// //FILTER
+// numbers.filter((element) => element % 2 === 0);
 
-//REDUCE
-numbers.reduce((previousElement, currentElement) => previousElement + currentElement, 0);
+// //REDUCE
+// numbers.reduce((previousElement, currentElement) => previousElement + currentElement, 0);
 
-const strings = ['qui', 'quo', 'qua'];
+// const strings = ['qui', 'quo', 'qua'];
 
-strings.reduce((previousElement, currentElement) => previousElement + currentElement, '');
+// strings.reduce((previousElement, currentElement) => previousElement + currentElement, '');
 
-//FOR IN - per ciclare gli oggetti
+// //FOR IN - per ciclare gli oggetti
 
-const andrea = {
-    name: 'Andrea',
-    surname: 'Aisoli',
-    hasADog: true,
-    yob: 1978
-}
+// const andrea = {
+//     name: 'Andrea',
+//     surname: 'Aisoli',
+//     hasADog: true,
+//     yob: 1978
+// }
 
-for (const key in andrea) {
-    if (Object.hasOwnProperty.call(andrea, key)) {
-        const value = andrea[key];
-        console.log(`andrea ha la propieta ${key} associata al valore ${value}`);
-    }
-}
+// for (const key in andrea) {
+//     if (Object.hasOwnProperty.call(andrea, key)) {
+//         const value = andrea[key];
+//         console.log(`andrea ha la propieta ${key} associata al valore ${value}`);
+//     }
+// }
 
 
 //------------------------------------------------------------------------------------------------------------
@@ -511,6 +511,23 @@ for (const key in andrea) {
 //         }
 //         return tempArray;
 // }
+
+function convertArrayInFizzBuzz2(array){
+    const newArray = array.map((numb) =>{
+        let result = '';
+            if (element % 3 === 0 && element % 5 === 0) {
+               result = 'FizzBuzz'; 
+            }else if (element % 3 === 0) {
+                result = 'Fizz';
+            }else if (element % 5 === 0) {
+                result = 'Buzz';
+            }else{
+                result += element;
+            }
+            return result; 
+    });
+    return newArray;
+}
 
 // console.log('Esercizio 1: ', convertArrayInFizzBuzz(numbers)); //['Fizz', 'Buzz', 'FizzBuzz', '8', 'Fizz', '2']
 
