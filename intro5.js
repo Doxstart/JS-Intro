@@ -512,29 +512,29 @@
 //         return tempArray;
 // }
 
-function convertArrayInFizzBuzz2(array){
-    const newArray = array.map((numb) =>{
-        let result = '';
-            if (element % 3 === 0 && element % 5 === 0) {
-               result = 'FizzBuzz'; 
-            }else if (element % 3 === 0) {
-                result = 'Fizz';
-            }else if (element % 5 === 0) {
-                result = 'Buzz';
-            }else{
-                result += element;
-            }
-            return result; 
-    });
-    return newArray;
-}
+// function convertArrayInFizzBuzz2(array){
+//     const newArray = array.map((numb) =>{
+//         let result = '';
+//             if (element % 3 === 0 && element % 5 === 0) {
+//                result = 'FizzBuzz'; 
+//             }else if (element % 3 === 0) {
+//                 result = 'Fizz';
+//             }else if (element % 5 === 0) {
+//                 result = 'Buzz';
+//             }else{
+//                 result += element;
+//             }
+//             return result; 
+//     });
+//     return newArray;
+// }   
 
 // console.log('Esercizio 1: ', convertArrayInFizzBuzz(numbers)); //['Fizz', 'Buzz', 'FizzBuzz', '8', 'Fizz', '2']
 
 // //2)Scrivere una funzione che prende in input un array di numeri e restituisce un array di numeri in cui 
 // //i positivi sono trasformati in negativi e viceversa (map)
 
-// const numbers1 = [-3, 5, 15, -8, 12, 2, 0];
+ const numbers1 = [-3, 5, 15, -8, 12, 2, 0];
 
 // function invertElements(array){
 //     const tempArray = [];
@@ -549,7 +549,21 @@ function convertArrayInFizzBuzz2(array){
 //         return tempArray;
 // }
 
-// console.log('Esercizio 2: ', invertElements(numbers1)); //[3, -5, -15, 8, -12, -2, 0]
+function invertElements2(array){
+    const tempArray2 = array.map((array) => {
+        for (let i = 0; i < array.length; i++) {
+                        const element = array[i];
+                        let result = 0;
+                        if (element !== 0) {
+                            result = element * -1
+                        }
+                        tempArray2.push(result);
+                    }
+    });
+    return tempArray2;
+}
+
+ console.log('Esercizio 2: ', invertElements2(numbers1)); //[3, -5, -15, 8, -12, -2, 0]
 
 // //3)Scrivere una funzione che prende in input un array di stringhe e restituisce un array di numeri con la
 // //lunghezza delle stringhe (map)
@@ -564,6 +578,10 @@ function convertArrayInFizzBuzz2(array){
 //     }
 //     return tempArray;
 // }
+
+//function lengthOfELements2(array){
+    //const tempArray2 = 
+//}
 
 // console.log('Esercizio 3: ', lengthOfELements(strings)); //[5, 5, 3]
 
@@ -608,7 +626,7 @@ function convertArrayInFizzBuzz2(array){
 
 // //6)Scrivere una funzione che prende in input un array di sringhe restituisce una stringa composta dalle iniziali (reduce)
 
-// const strings3 = ['pippo', 'osvaldo', 'paperino'];
+ const strings3 = ['pippo', 'osvaldo', 'paperino'];
 
 // function sumFirstChar(array){
 //     let tempString = '';
@@ -620,11 +638,27 @@ function convertArrayInFizzBuzz2(array){
 //         return tempString;
 // }
 
+// function sumFirstChar1(array){
+//     const newArray = array.reduce((previous, current) => {
+//         const firstChar = current[0];
+//         previous += firstChar;
+//         return previous;
+//     }, ''); 
+//     return newArray
+// }
+
+function sumFirstChar2(array){
+    return array.reduce((previous, current) => previous += current[0], '');
+}
+
+console.log('Esercizio 6: ', sumFirstChar2(strings3));
+//console.log('Esercizio 6: ', sumFirstChar1(strings3));
+
 // console.log('Esercizio 6: ', sumFirstChar(strings3)); //'pop'
 
-// //7)Scrivere una funzione che prende in input un array di numeri e restituisce il maggiore
+// //7)Scrivere una funzione che prende in input un array di numeri e restituisce il maggiore (reduce)
 
-// const numbers3 = [-3, 5, 15, -8, 12, 2, 0];
+//const numbers3 = [-3, 5, 15, -8, 12, 2, 0];
 
 // const numbers4 = [-1, -4, -3]
 
@@ -638,6 +672,20 @@ function convertArrayInFizzBuzz2(array){
 //         }
 //         return tempNumber;
 // }
+
+const numbers3 = [-3, 5, 15, -8, 12, 2, 0];
+
+function maxElement4(array){
+    return array.reduce((previous, current) => {
+        if (previous < current){
+            return current;
+        }else {
+            return previous;
+        }
+    }, -Infinity);
+}
+
+console.log('Esercizio 7: ', maxElement4(numbers3))
 
 // console.log('Esercizio 7: ', maxElement(numbers3)) //15
 // console.log('Esercizio 7: ', maxElement(numbers4)) //-1
